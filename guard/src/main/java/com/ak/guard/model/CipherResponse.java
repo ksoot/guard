@@ -1,43 +1,45 @@
 package com.ak.guard.model;
 
-import io.micrometer.core.lang.Nullable;
-import lombok.NonNull;
-
 public class CipherResponse {
-	@NonNull
-	String base64Data;
-	@Nullable
-	ErrorInfo errorInfo;
 
-	public CipherResponse() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public CipherResponse(String base64Data, ErrorInfo errorInfo) {
+	private p_M M;
+	private String sign;
+	private String certificate;
+	
+	
+	
+	public CipherResponse(p_M m, String sign, String certificate) {
 		super();
-		this.base64Data = base64Data;
-		this.errorInfo = errorInfo;
+		M = m;
+		this.sign = sign;
+		this.certificate = certificate;
 	}
 
-	public String getBase64Data() {
-		return base64Data;
+
+
+	public p_M getP_M() {
+		return M;
 	}
 
-	public void setBase64Data(String base64Data) {
-		this.base64Data = base64Data;
+
+
+	public String getSign() {
+		return sign;
 	}
 
-	public ErrorInfo getErrorInfo() {
-		return errorInfo;
+
+
+	public String getCertificate() {
+		return certificate;
 	}
 
-	public void setErrorInfo(ErrorInfo errorInfo) {
-		this.errorInfo = errorInfo;
-	}
+
 
 	@Override
 	public String toString() {
-		return "CipherResponse [base64Data=" + base64Data + ", errorInfo=" + errorInfo + "]";
+		return "CipherResponse [M=" + M + ", sign=" + sign + ", certificate=" + certificate + "]";
 	}
+	
+	
 
 }
